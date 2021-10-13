@@ -26,12 +26,48 @@
             <Border.Effect>
                 <DropShadowEffect/>
             </Border.Effect>
+            <StackPanel Orientation="Vertical" Margin="10,5">
+                <DockPanel Height="20" Margin="0,5,0,0">
+                    <TextBlock Text="Nombre" Width="70" DockPanel.Dock="Left"></TextBlock>
+                    <Image Source="img/info.png" ToolTip="Máximo 100 caracteres" DockPanel.Dock="Right"></Image>
+                        <TextBox></TextBox>
+                </DockPanel>
+                <DockPanel Height="20" Margin="0,5,0,0">
+                    <TextBlock Text="Edad" Width="70" DockPanel.Dock="Left"></TextBlock>
+                    <Image Source="img/info.png" ToolTip="Número entero entre 0 y 100" DockPanel.Dock="Right"></Image>
+                    <TextBox></TextBox>
+                </DockPanel>
+                <DockPanel Height="20" Margin="0,5,0,0">
+                    <TextBlock Text="Dirección" Width="70" DockPanel.Dock="Left"></TextBlock>
+                    <Image Source="img/info.png" ToolTip="Incluir el código postal" DockPanel.Dock="Right"></Image>
+                    <TextBox></TextBox>
+                </DockPanel>
+            </StackPanel>
         </Border>
 
         <Border Grid.Row="2" Grid.Column="0" BorderBrush="Black" BorderThickness="3" CornerRadius="5" Margin="5,10,5,5" Background="#FFF3F2CA">
             <Border.Effect>
                 <DropShadowEffect/>
             </Border.Effect>
+            <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Aficiones" Width="200" Margin="10" Padding="10" HorizontalAlignment="Left">
+                <StackPanel Orientation="Vertical">
+                    <CheckBox>Hacer deporte</CheckBox>
+                    <CheckBox>Viajar</CheckBox>
+                    <CheckBox>Ver series</CheckBox>
+                    <CheckBox>Leer comics</CheckBox>
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Header="Estado civil" Width="200" Margin="10" Padding="10" HorizontalAlignment="Left">
+                <StackPanel Orientation="Vertical">
+                        <RadioButton IsChecked="True">Soltero</RadioButton>
+                        <RadioButton>Casado</RadioButton>
+                        <RadioButton>Divorciado</RadioButton>
+                        <RadioButton>Viudo</RadioButton>
+                </StackPanel>
+            </GroupBox>
+            </StackPanel>
         </Border>
 
         <TextBlock Grid.Row="4" Grid.Column="0" Text="Oleksandr Veretennykov" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="20" FontStyle="Italic" Margin="5,0,0,5"></TextBlock>
