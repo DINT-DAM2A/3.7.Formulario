@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Icon="img/form.ico"
         Title="Formulario" Height="550" Width="850" MinHeight="550" MinWidth="850">
+
+    <Window.Resources>
+        <Style TargetType="DockPanel">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Margin" Value="0,5,0,0"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="TextBlockDockPanel">
+            <Setter Property="Width" Value="70"/>
+            <Setter Property="DockPanel.Dock" Value="Left"/>
+        </Style>
+
+        <Style TargetType="GroupBox">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+    </Window.Resources>
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"></ColumnDefinition>
@@ -27,18 +47,18 @@
                 <DropShadowEffect/>
             </Border.Effect>
             <StackPanel Orientation="Vertical" Margin="10,5">
-                <DockPanel Height="20" Margin="0,5,0,0">
-                    <TextBlock Text="Nombre" Width="70" DockPanel.Dock="Left"></TextBlock>
+                <DockPanel>
+                    <TextBlock Text="Nombre" Style="{StaticResource TextBlockDockPanel}"></TextBlock>
                     <Image Source="img/info.png" ToolTip="Máximo 100 caracteres" DockPanel.Dock="Right"></Image>
                         <TextBox></TextBox>
                 </DockPanel>
-                <DockPanel Height="20" Margin="0,5,0,0">
-                    <TextBlock Text="Edad" Width="70" DockPanel.Dock="Left"></TextBlock>
+                <DockPanel>
+                    <TextBlock Text="Edad" Style="{StaticResource TextBlockDockPanel}"></TextBlock>
                     <Image Source="img/info.png" ToolTip="Número entero entre 0 y 100" DockPanel.Dock="Right"></Image>
                     <TextBox></TextBox>
                 </DockPanel>
-                <DockPanel Height="20" Margin="0,5,0,0">
-                    <TextBlock Text="Dirección" Width="70" DockPanel.Dock="Left"></TextBlock>
+                <DockPanel>
+                    <TextBlock Text="Dirección" Style="{StaticResource TextBlockDockPanel}"></TextBlock>
                     <Image Source="img/info.png" ToolTip="Incluir el código postal" DockPanel.Dock="Right"></Image>
                     <TextBox></TextBox>
                 </DockPanel>
@@ -50,7 +70,7 @@
                 <DropShadowEffect/>
             </Border.Effect>
             <StackPanel Orientation="Horizontal">
-            <GroupBox Header="Aficiones" Width="200" Margin="10" Padding="10" HorizontalAlignment="Left">
+            <GroupBox Header="Aficiones">
                 <StackPanel Orientation="Vertical">
                     <CheckBox>Hacer deporte</CheckBox>
                     <CheckBox>Viajar</CheckBox>
@@ -59,7 +79,7 @@
                 </StackPanel>
             </GroupBox>
 
-            <GroupBox Header="Estado civil" Width="200" Margin="10" Padding="10" HorizontalAlignment="Left">
+            <GroupBox Header="Estado civil">
                 <StackPanel Orientation="Vertical">
                         <RadioButton IsChecked="True">Soltero</RadioButton>
                         <RadioButton>Casado</RadioButton>
