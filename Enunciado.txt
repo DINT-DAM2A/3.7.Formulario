@@ -1,0 +1,14 @@
+7. Diseñar la interfaz de un formulario para recoger la información de una
+persona siguiendo las siguientes indicaciones:
+• En esta actividad se pueden combinar todos los contenedores y controles
+vistos en esta unidad.
+• La interfaz debe comportarse al redimensionar la ventana como en el
+ejecutable suministrado.
+• Se ha utilizado el control GroupBox para agrupar controles. Su propiedad
+Header permite establecer la etiqueta del grupo.
+• Los iconos de información muestran un mensaje cuando el ratón pasa por
+encima. Para ello se debe utilizar la propiedad Tooltip que tienen la mayoría
+de los controles.
+• El tamaño del título es 40, y el del nombre 20 (sustituidlo por vuestro
+nombre). Los colores utilizados son a vuestra elección.
+Nombre del proyecto: Formulario
